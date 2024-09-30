@@ -12,10 +12,10 @@ st.write('''
 Cette Applicatiion predit le cout de l'assurance sante en fonction de l'age, sex, bmi, region, children and smoker
 ''')
 # creer  des sliders et des options pour les inputs de l'utilisation
-age = st.number_input('Age', 1.00, 100.00, 39.00)
+age = st.number_input('Age', 1, 100, 39)
 sex = st.selectbox('Sex', ('female', 'male'))
-bmi = st.slider('BMI', 15.00, 53.00, 30.00 )
-children = st.slider('Children', 0.00, 5.00, 1.00)
+bmi = st.number_input('BMI', 15.00, 53.00, 30.00 )
+children = st.number_input('Children', 0, 5, 1)
 smoker = st.selectbox('Smoker', ('yes', 'no'))
 region = st.selectbox('Region', ('southwest', 'southeast', 'northwest', 'northeast'))
 # convertir les inputs en format numeriques
@@ -60,5 +60,5 @@ if st.button('Predire le cout de charge'):
     # faire la prediction
     predicted_cost = model.predict(input_data)
     # afficher le resultat
-    st.subheader(predicted_cost[0])
+    st.subheader(f"{predicted_cost[0]}")
 
