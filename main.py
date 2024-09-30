@@ -2,7 +2,8 @@ import streamlit as st
 import joblib
 import numpy as np
 # Charger le modèle pré-entraîné
-model = joblib.load("C:/Users/irene/Downloads/insurance.pkl")
+model = joblib.load("insurance.pkl")
+
 # Titre de l'application
 st.title('Prédiction du Coût de l\'Assurance Santé')
 
