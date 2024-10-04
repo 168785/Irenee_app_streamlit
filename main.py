@@ -14,8 +14,8 @@ This App predicts the cost of health insurance based on age, sex, bmi, region, c
 # Creation of slider and options of input of user
 age = st.number_input('Age', 1.00, 100.00, 39.00)
 sex = st.selectbox('Sex', ('female', 'male'))
-bmi = st.slider('BMI', 15.00, 53.00, 30.00 )
-children = st.slider('Children', 0.00, 5.00, 1.00)
+bmi = st.number_input('BMI', 15.00, 53.00, 30.00 )
+children = st.number_input('Children', 0.00, 5.00, 1.00)
 smoker = st.selectbox('Smoker', ('yes', 'no'))
 region = st.selectbox('Region', ('southwest', 'southeast', 'northwest', 'northeast'))
 # convert inputs into numeric format
