@@ -5,7 +5,7 @@ import numpy as np
 model = joblib.load("insurance.pkl")
 
 # App title
-st.title('Prédiction du Coût de l\'Assurance Santé')
+st.title('Predict the insurance cost')
 
 # App description
 st.write('''
